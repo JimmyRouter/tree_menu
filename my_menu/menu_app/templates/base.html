@@ -1,0 +1,23 @@
+{% load static %}
+{% load menu_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}">
+    <title>My Menu</title>
+</head>
+<body>
+    <main>
+        <header class="site_header">home products contacts about</header>
+        <div class="menu_container">
+            {% draw_menu 'menu_main' %}
+        </div>
+            {% block content %}
+            {% endblock %}
+
+    </main>
+</body>
+</html>

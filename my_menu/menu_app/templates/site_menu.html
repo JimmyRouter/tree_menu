@@ -1,0 +1,14 @@
+{% load menu_tags %}
+<div class="menu_item {{status}}">
+
+    {% include 'menu_item.html' with menu=menu %}
+    {% if menu.children %}
+    <ul class="inlet_ul">
+        {% for child in menu.children.all %}
+        <li class="inlet_li">
+        {% draw_menu child.menu_name %}
+        {% endfor %}
+        </li>
+    </ul>
+    {% endif %}
+</div>

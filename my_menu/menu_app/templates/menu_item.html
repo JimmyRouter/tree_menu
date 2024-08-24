@@ -1,0 +1,8 @@
+    <div class="menu_label">
+        <button class="expand_btn"><p>&#8794;</p></button><button class="collapse_btn"><p>&#8793;</p></button>
+        {% if menu.url %}
+            <a href="{{ menu.url }}" class="menu_title">{{ menu.title }}</a>
+        {% elif menu.named_url %}
+            <strong><a href="{% url menu.named_url %}" class="menu_title">{{ menu.title }}</a></strong>
+        {% endif %}
+    </div>
